@@ -1,0 +1,85 @@
+
+defs:
+  host: '127.0.0.1'
+  delay: 2
+  parse_server_delay: 5
+dirs:
+  base_dir: ~/Documents/code/SecureDatabase
+servers:
+  max_workers: 500
+  
+  client_proxy:
+    host: ${defs.host}
+    port: '60060'
+  key_server:
+    host: ${defs.host}
+    port: '60070'
+  parse_server:
+    host: ${defs.host}
+    port: '60080'
+  aggregate_server:
+    host: ${defs.host}
+    port: '60091'
+
+  data_server_1:
+    host: ${defs.host}
+    name: 'tpch_part_10e3_4_1' 
+    port: '60010'
+  data_server_2:
+    host: ${defs.host}
+    name: 'tpch_part_10e3_4_2' 
+    port: '60011'
+  data_server_3:
+    host: ${defs.host}
+    name: 'tpch_part_10e3_4_3'
+    port: '60012'
+
+
+  data_server_4:
+    host: ${defs.host}
+    name: 'osm_10e3_3_3'
+    port: '60013'
+  data_server_5:
+    host: ${defs.host}
+    name: 'imis_400w_4'
+    port: '60014'
+
+  data_server_6:
+    host: ${defs.host}
+    name: 'imis_400w_5'
+    port: '60015'
+
+  data_server_7:
+    host: ${defs.host}
+    name: 'imis_400w_6'
+    port: '60016'
+
+  data_server_8:
+    host: ${defs.host}
+    name: 'imis_400w_7'
+    port: '60017'
+
+  data_server_9:
+    host: ${defs.host}
+    name: 'imis_400w_8'
+    port: '60018'
+
+  data_server_10:
+    host: ${defs.host}
+    name: 'imis_400w_9'
+    port: '60019'
+
+
+
+clients:
+  client_1:
+    host: ${defs.host}
+    port: '60060'
+
+database:
+  host: ${defs.host}
+  port: '3338'  #use 5.6 for hufu: '3337'
+  user: 'root'
+  password: 'mysql'
+  database: 'total'
+  charset: utf8mb4
